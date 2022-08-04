@@ -1,0 +1,55 @@
+use_secondary_model:  OFF   < --- note that this makes the animation take like a month dude, you may want to keep this off but it won't look as nice)
+ViTB32: on
+RN50: on
+
+steps:
+250
+width_height:
+[1280, 720]
+clip_guidance_scale:
+111111
+tv_scale:
+0
+range_scale:
+195
+sat_scale:
+15111
+cutn_batches:
+1
+extract_nth_frame:
+1
+flow_warp: on of course
+flow_blend:
+0.999 <-- you could go lower with this if you are getting dark areas, go lower especially if your video doens't move much!!!! like 0.80 or 0.90
+
+check_consistency:  ABSOLUTELY ON.
+
+Turbo mode: on
+turbo_steps: 3
+
+frames_scale:
+1500
+
+frames_skip_steps: 72% <--- you could go up to 75% or 80% if you want your video to be smoother but, I do 72% to ensure that it add's details with my crazy amount of movement)
+
+eta:
+0.35
+
+clamp_grad: on
+
+clamp_max: 1 <--- this is pretty high but, this notebook allows for insane values like this.  I keep this value high so that It creates details with the fast movements, or just to ensure that it creates details with a high frame_skip %, a value of 1 like this would work well for 80% frame skip, which is what our turbo frames use.
+
+Cut scheduale is default
+
+Prompt: 0: ["Botanical Gardens light rays shine upon it oil on canvas | heavenly rays by beeple", "blacklight aesthetic luminal outer space | cosmic unfolding by CASPAR DAVID FRIEDRICH | gods by beeple | Underwater forest by Tyler Edlin", "Hong Kong"],
+
+turbo_frame_skips_steps: 85%
+
+soften_consistency_mask: 0
+soften_consistency_mask_for_turbo_frames: 0
+consistency_blur: 1
+padding_ratio: 0.1
+inpaint_blend: 0.7
+
+
+Good luck
